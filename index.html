@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portifolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- box icons -->
     <link 
@@ -28,8 +30,8 @@
         <ul class="menulist">
             <a href="#home" class="active">Home</a>
             <a href="#about">Sobre</a>
-            <a href="#services">Servicos</a>
-            <a href="#portfolio">Portifolio</a>
+            <!--<a href="#services">Servicos</a>-->
+            <a href="#portifolio">Portifolio</a>
             <a href="#contact">Contatos</a>
         </ul>
 
@@ -43,34 +45,40 @@
     </header>
 
     <!-- home -->
+    <div class="fade">
     <section class="home" id="home">
-        <div class="home-text">
-            <a href="#" class="h-line">
-                <i class="ri-shining-2-line"></i>
-                <span>Eu sou Joao Latczuk</span>
-            </a>
-            <h1>Desenvolvedor <br><span>FULL-STACK</span></h1>
-            <h4>Ainda em apreendizado</h4>
-            <div class="social-icons">
-                <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="#"><i class="ri-instagram-fill"></i></a>
-                <a href="#"><i class="ri-github-fill"></i></a>
-            </div>
-
-            <div class="h-btn">
-                <a href="#" class="btn1">
-                    Meus trabalhos
-                    <i class="ri-arrow-right-s-line"></i>
+            <div class="home-text">
+                <a href="#" class="h-line">
+                    <i class="ri-shining-2-line"></i>
+                    <span>Eu sou Joao Latczuk</span>
                 </a>
+                <h1>Desenvolvedor <br><span class="input"> </span></h1>
+                <h4>Ainda em apreendizado</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/joao-latczuk/"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="https://www.instagram.com/joaolatczuk/"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://github.com/joaolatczuk/"><i class="ri-github-fill"></i></a>
+                    <a href=" https://wa.me/14998181004"><i class="ri-whatsapp-fill"></i></a>
+                </div>
 
-                <a href="#" class="btn2">
-                    Download CV
-                    <i class="ri-download-2-line"></i>
-                </a>
+                <div class="h-btn">
+                    <a href="#" class="btn1">
+                        Meus trabalhos
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+
+                    <a href="./arq/Curriculo.pdf" class="btn2" download>
+                        Download CV
+                        <i class="ri-download-2-line"></i>
+                    </a>
+                </div>
             </div>
-        </div>
+        
+    </div>
     </section>
+</div>
     <!-- sobre -->
+    <div class="fade">
     <section class="about" id="about">
         <div class="about-img">
             <img src="img/about.png">
@@ -98,6 +106,7 @@
             </div>
         </div>
     </section>
+    </div>
     <!--
     <section class="services" id="services">
         <div class="sevices-left">
@@ -155,7 +164,7 @@
     -->
 
     <!-- portifolio-->
-
+    <div class="fade">
     <section class="portifolio" id="portifolio">
         <div class="mid-text">
             <a href="#" class="h-line">
@@ -169,13 +178,13 @@
             <div class="portifolio-content">
                 <div class="row">
                     <div class="row-img">
-                        <img src="img/p1.jpg">
+                        <img src="img/p1.png">
                     </div>
 
                     <div class="row-in">
                         <div class="row-left">
-                            <h3>Titulo</h3>
-                            <h6>Oque foi utilizado</h6>
+                            <h3>Projetos em realização</h3>
+                            <h6></h6>
                         </div>
                         <div class="row-right">
                             <a href="#"><i class="ri-arrow-right-line"></i></a>
@@ -185,13 +194,13 @@
 
                 <div class="row">
                     <div class="row-img">
-                        <img src="img/p2.jpg">
+                        <img src="img/p2.png">
                     </div>
 
                     <div class="row-in">
                         <div class="row-left">
-                            <h3>Titulo</h3>
-                            <h6>Oque foi utilizado</h6>
+                            <h3>Projetos em realização</h3>
+                            <h6></h6>
                         </div>
                         <div class="row-right">
                             <a href="#"><i class="ri-arrow-right-line"></i></a>
@@ -201,13 +210,13 @@
 
                 <div class="row">
                     <div class="row-img">
-                        <img src="img/p3.jpg">
+                        <img src="img/p3.png">
                     </div>
 
                     <div class="row-in">
                         <div class="row-left">
-                            <h3>Titulo</h3>
-                            <h6>Oque foi utilizado</h6>
+                            <h3>Projetos em realização</h3>
+                            <!--<h6>Oque foi utilizado</h6>-->
                         </div>
                         <div class="row-right">
                             <a href="#"><i class="ri-arrow-right-line"></i></a>
@@ -217,6 +226,59 @@
             </div>
         </div>
     </section>
+</div>
+
+    <!-- contato -->
+    <div class="fade">
+    <section class="contact" id="contact">
+        <div class="contact-main">
+            <a href="#" class="h-line">
+                <i class="ri-shining-2-line"></i>
+                <span>Contatar!</span>
+            </a>
+            <h2>Bora <span>conversar</span></h2>
+
+            <div class="email">
+                <p>Email:</p>
+                <h6>joaocontatoscel@gmail.com</h6>
+            </div>
+
+            <div class="num">
+                <p>Chame:</p>
+                <h6>(14) 99818-1004</h6>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+        </div>
+        <form action="https://formsubmit.co/joaocontatoscel@gmail.com" class="contact-form" method="POST">
+            <input type="text" name="name"placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Endereço de email..." required>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Insira sua mensagem aqui ..." required></textarea>
+            <input type="hidden" name="_captcha" value="true">
+            <input type="submit" value="Mande Agora" class="submit-btn">
+            <input type="hidden" name="_next" value="https://joaolatczuk.github.io/index.html">
+        </form>
+    </section>
+</div>
+    
+
+    <!-- parte de baixo -->
+    <div class="fade">
+    <section class="footer2">
+        
+        <div class="footer">
+            <div class="copyright"> Copyright © 2024 João Vinicius Latczuk. Todos os direitos reservados. </div>
+            <a href="#home" class="scroll-top">
+                <i class="ri-arrow-up-s-line"></i>
+            </a>
+        </div>
+    </section>
+</div>
 
     <!-- aquivo js -->
     <script src="js/script.js"></script>
