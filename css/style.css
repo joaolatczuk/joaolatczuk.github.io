@@ -204,8 +204,7 @@ section{
 
 header.sticky{
     padding: 5px 14%;
-    background-color: transparent;
-    backdrop-filter: blur(25px);
+    background-color: var(--bg-color);
 }
 
 .about{
