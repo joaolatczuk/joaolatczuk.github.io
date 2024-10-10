@@ -12,15 +12,16 @@
     --bg-color: #121212;
     --second-bg-color: #202020;
     --text-color: #ffffff;
-    --main-color: #03256c;
+    --main-color: #798BB1;
+    --main2-color: #FFFF;
     --other-color: #8b8a91;
     --alt-color: #4b4b51;
     --ann-color: #c7c6d3;
     --other: #ffffff;
+    --bar: #171717;
     --h1-fonts: 6rem;
     --h2-fonts: 3.8rem;
     --p-fonts: 1.1rem;
-
 }
 
 
@@ -33,18 +34,19 @@ header{
     position: fixed;
     top: 0;
     right: 0;
-    padding: 20px 14%;
+    padding: 5px 14%;
+    height: 65px;
     width: 100%;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: all .6s ease;
+    background: #171717;
 }
 .logo{
+    display: inline-block;
     max-width: 20px;
     width: 100%;
-    height: 100%;
     object-fit: contain;
 }
 .menulist a{
@@ -54,6 +56,7 @@ header{
     color: var(--other-color);
     margin: 0 30px;
     transition: all .6s ease;
+    
 }
 .menulist a:hover{
     color: var(--text-color);
@@ -70,17 +73,18 @@ header{
 
 .menu-btn{
     display: inline-block;
-    padding: 15px 25px;
-    background: linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
-    color: var(--bg-color);
+    padding: 10px 25px;
+    background: var(--main2-color);
+    color: var(--bar);
     font-size: 20px;
     font-weight: 500;
     border-radius: 13px;
+    transition: all .6s ease;
 }
 
 .menu-btn:hover{
     
-    background: linear-gradient(135deg, var(--main-color) 0%, var(--other) 100%);
+    background: var(--other-color);
     
 }
 
@@ -90,14 +94,13 @@ header{
     margin-left: 25px;
     cursor: pointer;
     display: none;
-    
 }
 
 section{
     padding: 110px 14% 90px;
 }
 .home{
-    height: 100vh;
+    height: 99vh;
     width: 100%;
     background: url(../img/bg.png);
     background-size: cover;
@@ -133,7 +136,7 @@ section{
 }
 
 .home-text h1 span{
-    background: -webkit-linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -190,7 +193,7 @@ section{
 .btn2{
     display: inline-block;
     padding: 18px 35px;
-    background: linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: var(--main-color);
     color: var(--bg-color);
     font-size: 18px;
     font-weight: 500;
@@ -204,7 +207,7 @@ section{
 
 header.sticky{
     padding: 5px 14%;
-    background-color: var(--bg-color);
+    background-color: var(--bar);
 }
 
 .about{
@@ -219,7 +222,9 @@ header.sticky{
     width: 100%;
     height: 700px;
     max-width: 550px;
+    background: var(--main-color);
     object-fit: cover;
+    border-radius: 5%;
 }
 
 .about-text h2{
@@ -228,7 +233,7 @@ header.sticky{
 }
 
 .about-text h2 span{
-    background: -webkit-linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: var(--main-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -261,7 +266,7 @@ header.sticky{
 }
 
 .services-left h2 span{
-    background: -webkit-linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: var(--main-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -291,7 +296,7 @@ header.sticky{
     background: var(--second-bg-color);
     border-radius: 0.5rem;
     border-bottom: 2px solid transparent;
-    border-image: linear-gradient(135deg, var(--main-color) 0%, var(--other) 100%);
+    border-image: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     border-image-slice: 1;
     transition: all .7s ease;
     cursor: pointer;
@@ -303,7 +308,7 @@ header.sticky{
     justify-content: center;
     height: 60px;
     width: 60px;
-    background: linear-gradient(135deg, var(--main-color) 0%, var(--other) 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     color: var(--bg-color);
     border-radius: 2em;
     font-size: 22px;
@@ -329,7 +334,7 @@ header.sticky{
 .box:hover{
     transform: translateY(-7px);
     border-bottom: 2px solid transparent;
-    border-image: linear-gradient(135deg, var(--main-color) 0%, var(--other));
+    background: var(--main-color);
 }
 
 .portifolio{
@@ -341,7 +346,7 @@ header.sticky{
 }
 
 .mid-text h2 span{
-    background: -webkit-linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -404,7 +409,7 @@ header.sticky{
     justify-content: center;
     height: 50px;
     width: 50px;
-    background: linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     color: var(--bg-color);
     border-radius: 1.7rem;
     font-size: 22px;
@@ -432,7 +437,7 @@ header.sticky{
 }
 
 .contact-main h2 span{
-    background: -webkit-linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);
+    background: -webkit-linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -489,7 +494,7 @@ header.sticky{
 form .submit-btn{
     display: inline-block;
     padding: 18px 25px;
-    background: linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);;
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);;
     color: var(--second-bg-color);
     font-size: 17px;
     font-weight: 500;
@@ -504,7 +509,7 @@ form .submit-btn:hover{
 }
 
 .footer{
-    padding: 10px 14%;
+    padding: 0px;
     background: transparent;
     color: var(--text-color);
     display: flex;
@@ -515,8 +520,8 @@ form .submit-btn:hover{
 
 .copyright p{
     font-size: 15px;
-    font-weight: 400;
-    color: vae  var(--ann-color);
+    font-weight: 00;
+    color: var(--ann-color);
 }
 
 .scroll-top i{
@@ -525,10 +530,11 @@ form .submit-btn:hover{
     justify-content: center;
     height: 50px;
     width: 50px;
-    background: linear-gradient(135deg, var(--other) 0%, var(--main-color) 100%);;
+    background: linear-gradient(135deg, var(--other) 0%, var(--other) 100%);;
     color: var(--bg-color);
     border-radius: 1.7rem;
     font-size: 22px;
+    
 }
 
 @media(max-width: 1580px){
@@ -542,7 +548,7 @@ form .submit-btn:hover{
         padding: 100px 6% 80px;
     }
     .footer{
-        padding: 15px 6%;
+        padding: 0px 6%;
     }
 }
 
@@ -557,7 +563,7 @@ form .submit-btn:hover{
         padding: 100px 3% 80px;
     }
     .footer{
-        padding: 15px 3%;
+        padding: 0px 3%;
     }
     :root{
         --h1-fonts: 4.5rem;
