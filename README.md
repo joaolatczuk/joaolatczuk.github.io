@@ -21,6 +21,7 @@ Desenvolvido meu primeiro portfólio, onde exercitei e treinei alguns conceitos 
 
 - [✔️] é possivel acessar minhas redes através dos links;
 - [✔️] o formulário de e-mail está funcional;
+- [✔️] modo Dark e White funcional;
 <br>
 
 - Acesse o projeto finalizado, [clicando aqui](https://joaolatczuk.github.io/).
