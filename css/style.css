@@ -9,19 +9,19 @@
 }
 
 :root{
-    --bg-color: #121212;
-    --second-bg-color: #202020;
-    --text-color: #ffffff;
-    --main-color: #798BB1;
-    --main2-color: #FFFF;
-    --other-color: #8b8a91;
-    --alt-color: #4b4b51;
-    --ann-color: #c7c6d3;
-    --other: #ffffff;
-    --bar: #171717;
     --h1-fonts: 6rem;
     --h2-fonts: 3.8rem;
     --p-fonts: 1.1rem;
+    --bg-color: #ededed;/*trocado*/
+    --second-bg-color: #dfdfdf;/*trocado*/
+    --text-color: #000000;/* trocado */
+    --main-color: #86744e;/*trocado*/
+    --main2-color: #000000;/* trocado */
+    --other-color: #74756e;
+    --alt-color: #38392c;
+    --ann-color: #38392c;
+    --other: #000000;/* trocado */
+    --bar: #e8e8e8;/* trocado */
 }
 
 
@@ -41,13 +41,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #171717;
+    background: var(--bar);
 }
 .logo{
     display: inline-block;
     max-width: 20px;
     width: 100%;
+    margin-top: 6px;
     object-fit: contain;
+    
 }
 .menulist a{
     display: inline-block;
@@ -64,6 +66,99 @@ header{
 
 .menulist a:active{
     color: var(--text-color);
+}
+
+
+.dark{
+    background-color: #ffffff;
+    width: 70px;
+    height: 40px;
+    border-radius: 10em;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, .2),
+                inset 0 8px 8px rgba(0, 0, 0, .2),
+                inset 0 -4px 4px rgba(0, 0, 0, .2);
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn_icon{
+    color: var(--light-icon-color);
+    font-size: 1rem;
+}
+
+.btn_indicator{
+    background-color: white;
+    right: 33px;/* 2px da borda */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, .6);
+    transition: transform .6s ease;
+}
+
+.btn_icon_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.darkmode{
+    --bg-color: #121212;
+    --second-bg-color: #202020;
+    --text-color: #ffffff;
+    --main-color: #798BB1;
+    --main2-color: #FFFF;
+    --other-color: #8b8a91;
+    --alt-color: #4b4b51;
+    --ann-color: #c7c6d3;
+    --other: #ffffff;
+    --bar: porti;
+}
+
+.darkmode .dark{
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, .3),
+                inset 0 8px 8px rgba(0, 0, 0, .3),
+                inset 0 -4px 4px rgba(0, 0, 0, .3);
+                
+}
+
+.darkmode :root{
+    --bg-color: #121212;
+    --second-bg-color: #202020;
+    --text-color: #ffffff;
+    --main-color: #798BB1;
+    --main2-color: #FFFF;
+    --other-color: #8b8a91;
+    --alt-color: #4b4b51;
+    --ann-color: #c7c6d3;
+    --other: #ffffff;
+    --bar: #171717;
+}
+
+.darkmode .btn_indicator{
+    transform: translateX(31px);
+    background-color: black;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, .3);
+}
+
+
+.darkmode .btn_icon{
+    color: var(--dark-icon-color);
+}
+
+.btn_icon.animated{
+    animation: spin 0.5s;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 .menu-right{
@@ -103,6 +198,17 @@ section{
     height: 99vh;
     width: 100%;
     background: url(../img/bg.png);
+    background-size: cover;
+    background-position: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.darkmode .home{
+    height: 99vh;
+    width: 100%;
+    background: url(../img/bg-dark.png);
     background-size: cover;
     background-position: cover;
     display: flex;
