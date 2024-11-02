@@ -6,6 +6,8 @@ const icon = document.querySelector('.btn_icon');
 var imgAtual = "img/logo.png";
 var imgAnterior = "img/logo-dark.png"
 
+var imgGitAtual = "img/tecnologias/github-white.png"
+var imgGitAnterior = "img/tecnologias/github.png"
 
 window.addEventListener("scroll",function(){
     header.classList.toggle("sticky",window.scrollY > 130)
@@ -40,6 +42,11 @@ const logo = document.getElementById('imagem').src = imgAtual;
 let aux = imgAtual;
 imgAtual = imgAnterior;
 imgAnterior = aux;
+
+const logo2 = document.getElementById('imagem2').src = imgGitAtual;
+let aux2 = imgGitAtual;
+imgGitAtual = imgGitAnterior;
+imgAnterior = aux2;
 
     if(body.classList.contains('darkmode')){
         icon.classList.remove('ri-sun-fill');
