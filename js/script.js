@@ -46,7 +46,7 @@ imgAnterior = aux;
 const logo2 = document.getElementById('imagem2').src = imgGitAtual;
 let aux2 = imgGitAtual;
 imgGitAtual = imgGitAnterior;
-imgAnterior = aux2;
+imgGitAnterior = aux2;
 
     if(body.classList.contains('darkmode')){
         icon.classList.remove('ri-sun-fill');
