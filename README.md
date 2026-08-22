@@ -94,10 +94,7 @@ joaolatczuk.github.io/
 │   ├── aligna.svg
 │   ├── bg.png
 │   ├── logo.svg
-│   ├── p1.png
 │   ├── p1.svg
-│   ├── p2.png
-│   ├── p3.png
 │   └── siguescola.svg
 ├── js/
 │   └── script.js
