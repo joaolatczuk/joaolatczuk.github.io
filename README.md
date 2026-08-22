@@ -41,7 +41,35 @@ Este site foi projetado para demonstrar na prática minhas habilidades em desenv
 
 ---
 
-## 📁 Estrutura de Pastas & 📬 Contatos
+## 📬 Contatos & Redes Sociais
+
+<p align="left">
+  <a href="mailto:joaocontatoscel@gmail.com">
+    <img src="https://img.shields.io/badge/E--mail-joaocontatoscel%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  </a>
+  <a href="https://wa.me/5514998181004" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp-(14)%2099818--1004-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+  </a>
+  <a href="https://www.linkedin.com/in/joao-latczuk/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-João%20Latczuk-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/joaolatczuk/" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-joaolatczuk-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.instagram.com/joaolatczuk/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-@joaolatczuk-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+  </a>
+</p>
+
+* **E-mail:** [joaocontatoscel@gmail.com](mailto:joaocontatoscel@gmail.com)
+* **WhatsApp:** [+55 (14) 99818-1004](https://wa.me/5514998181004)
+* **LinkedIn:** [linkedin.com/in/joao-latczuk](https://www.linkedin.com/in/joao-latczuk/)
+* **Instagram:** [@joaolatczuk](https://www.instagram.com/joaolatczuk/)
+* **GitHub:** [github.com/joaolatczuk](https://github.com/joaolatczuk/)
+
+---
+
+## 📁 Estrutura de Pastas
 
 ```bash
 joaolatczuk.github.io/
@@ -74,11 +102,4 @@ joaolatczuk.github.io/
 ├── js/
 │   └── script.js
 ├── index.html
-├── README.md
-│
-└── [Contatos & Redes Sociais]
-    ├── E-mail:    joaocontatoscel@gmail.com
-    ├── WhatsApp:  +55 (14) 99818-1004
-    ├── LinkedIn:  [linkedin.com/in/joao-latczuk](https://linkedin.com/in/joao-latczuk)
-    ├── Instagram: @joaolatczuk
-    └── GitHub:    [github.com/joaolatczuk](https://github.com/joaolatczuk)
+└── README.md
