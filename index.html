@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>João Latczuk | Desenvolvedor Web</title>
+
+    <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+    <!-- CSS Principal -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- box icons -->
-    <link 
-    href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- remix icons -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"/>
 
-    <!-- google fonts -->
+    <!-- Box Icons & Remix Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="">
-    <!-- cabecalho -->
-    <header class="sticky">
-        <a href="#" class="logo"><img id="imagem" width="50px" src="img/logo-dark.png"></a>
+
+<body>
+
+    <!-- Cabeçalho Fixo -->
+    <header>
+        <a href="#home" class="logo">
+            <img id="imagem" width="50" src="img/logo.svg" alt="Logotipo João Latczuk">
+        </a>
+
         <ul class="menulist">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">Sobre</a>
-            <!--<a href="#services">Servicos</a>-->
-            <a href="#portifolio">Portifolio</a>
-            <a href="#contact">Contatos</a>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#timeline">Trajetória</a></li>
+            <li><a href="#portifolio">Portfólio</a></li>
+            <li><a href="#contact">Contatos</a></li>
         </ul>
 
-        <div class="dark">
+        <!-- Botão Dark Mode -->
+        <div class="dark" role="button" aria-label="Alternar tema">
             <div class="btn_indicator">
                 <div class="btn_icon_container">
                     <i class="btn_icon ri-sun-fill"></i>
@@ -48,51 +52,59 @@
                 <span>Vamos conversar</span>
                 <i class="ri-message-3-line"></i>
             </a>
-            <div class="bx bx-menu" id="menu-icon"></div>
+            <div class="bx bx-menu" id="menu-icon" aria-label="Abrir menu mobile"></div>
         </div>
     </header>
 
-    <!-- home -->
-    <div class="fade">
-    <section class="home" id="home">
-            <div class="home-text">
-                <h1>Desenvolvedor <br><span class="input"> </span></h1>
-                <h4>Ainda em apreendizado</h4>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/joao-latczuk/"><i class="ri-linkedin-box-fill"></i></a>
-                    <a href="https://www.instagram.com/joaolatczuk/"><i class="ri-instagram-fill"></i></a>
-                    <a href="https://github.com/joaolatczuk/"><i class="ri-github-fill"></i></a>
-                    <a href=" https://wa.me/14998181004"><i class="ri-whatsapp-fill"></i></a>
-                </div>
+    <!-- 1. Home (Fundo Base) -->
+    <section class="home fade" id="home">
+        <div class="home-text">
+            <h1>Desenvolvedor <br><span class="input"></span></h1>
+            <h4>Formado em Segurança da Informação com foco em Node.js e desenvolvimento web full stack.</h4>
 
-                <div class="h-btn">
-                    <a href="#portifolio" class="btn1">
-                        Meus trabalhos
-                        <i class="ri-arrow-right-s-line"></i>
-                    </a>
-
-                    <a href="./arq/Curriculo.pdf" class="btn2" download>
-                        Download CV
-                        <i class="ri-download-2-line"></i>
-                    </a>
-                </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/joao-latczuk/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/joaolatczuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://github.com/joaolatczuk/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://wa.me/5514998181004" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="ri-whatsapp-fill"></i>
+                </a>
             </div>
-        
-    </div>
+
+            <div class="h-bt">
+                <a href="#portifolio" class="btn1">
+                    Meus trabalhos
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+
+                <a href="./arq/Curriculo.pdf" class="btn2" download aria-label="Baixar Currículo em PDF">
+                    Download CV
+                    <i class="ri-download-2-line"></i>
+                </a>
+            </div>
+        </div>
     </section>
-</div>
-    <!-- sobre -->
-    <div class="fade">
-    <section class="about" id="about">
+
+    <!-- 2. Sobre (Fundo Secundário) -->
+    <section class="about fade" id="about">
         <div class="about-img">
-            <img src="img/about.png">
+            <img src="img/about.png" alt="Foto de perfil de João Vinicius Latczuk">
         </div>
 
         <div class="about-text">
             <h2>Mais <span>sobre mim</span></h2>
-            <h5>Olá, eu sou João Vinicius Latczuk, tenho o sonho em me tornar desenvolvedor, gosto muito da parte de programação tanto front-end quanto back-end.</h5>
-            <p>Atualmente estou estudando Analise e desenvolvimento de sistemas, já formado em Segurança da Informação pela Faculdade de Tecnologia de Ourinhos (FATEC-OU). Tendo conhecimento básico em algumas linguagens como C, Python, JavaScript entre outros. Assim possuindo uma lógica de programação moderada, além do conhecimento em Linux adquirido em Segurança da Informação.<br>Fico animado e ansioso para continuar explorando novas oportunidades e conseguir contribuir para grandes projetos.
-                </p>
+            <h5>Olá, eu sou João Vinicius Latczuk, desenvolvedor focado em criar soluções completas e eficientes tanto no front-end quanto no back-end.</h5>
+            <p>
+                Graduado em Segurança da Informação pela Faculdade de Tecnologia de Ourinhos (FATEC-OU) e cursando Análise e Desenvolvimento de Sistemas. Possuo sólida experiência com ecossistema JavaScript/Node.js, bancos relacionais (MySQL) e integração de templates/APIs, consolidada em projetos como o <strong>SiguEscola</strong> (gestão escolar municipal). Sempre focado em boas práticas, performance e aprendizado contínuo.
+            </p>
+
+            <div class="h-bt">
                 <a href="#portifolio" class="btn1">
                     Meus trabalhos
                     <i class="ri-arrow-right-s-line"></i>
@@ -102,137 +114,180 @@
                     Download CV
                     <i class="ri-download-2-line"></i>
                 </a>
+            </div>
         </div>
     </section>
+
+    <!-- 3. Trajetória / Timeline (Fundo Base) -->
+    <section class="timeline-section fade" id="timeline">
+    <div class="mid-text fade">
+        <h2>Minha <span>trajetória</span></h2>
     </div>
-    <!--
-    <section class="services" id="services">
-        <div class="sevices-left">
-                <h2>Oque eu tenho há oferecer <span>aos meus Clientes</span></h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <div class="h-btn"></div>
-                <a href="#" class="btn1">
-                    Ver todos
-                    <i class="ri-arrow-right-s-line"></i>
-                </a>
 
-                <a href="#" class="btn2">
-                    Download CV
-                    <i class="ri-download-2-line"></i>
-                </a>
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- 1. Técnico ETEC -->
+        <div class="timeline-item fade">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2016 - 2018</span>
+                <h3>Técnico em Informática para Internet</h3>
+                <h4>Ensino Técnico Integrado ao Médio (ETEC Ourinhos)</h4>
+                <p>Primeiro contato formal com desenvolvimento de software, abordando lógica de programação, fundamentos de web (HTML, CSS e JavaScript), banco de dados e infraestrutura.</p>
             </div>
         </div>
-        <div class="services-right">
-            <div class="box">
-                <div class="box-icon">
-                    <i class="ri-brush-line"></i>
-                </div>
-                <div class="box-text">
-                    <h5>Desenvolvimento</h5>
-                    <p>Realizei alguns projetos de desenvolvimento</p>
-                </div>
-            </div>
 
-            <div class="box">
-                <div class="box-icon">
-                    <i class="ri-mac-line"></i>
-                </div>
-                <div class="box-text">
-                    <h5>Front-end</h5>
-                    <p>Realizei alguns projetos de desenvolvimento</p>
-                </div>
+        <!-- 2. Intercâmbio Argentina -->
+        <div class="timeline-item fade">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2019 - 2021</span>
+                <h3>Intercâmbio Cultural & Acadêmico</h3>
+                <h4>Vivência Internacional (Argentina)</h4>
+                <p>Experiência de imersão focada em fluência em espanhol, adaptabilidade multicultural, autonomia e resolução de problemas em ambientes dinâmicos.</p>
             </div>
-
-            <div class="box">
-                <div class="box-icon">
-                    <i class="ri-code-line"></i>
-                </div>
-                <div class="box-text">
-                    <h5>Back-end</h5>
-                    <p>Realizei alguns projetos de desenvolvimento</p>
-                </div>
-            </div>
-            
         </div>
-    </section>
-    -->
 
-    <!-- portifolio-->
-    <div class="fade">
-    <section class="portifolio" id="portifolio">
+        <!-- 3. Graduação Segurança da Informação -->
+        <div class="timeline-item fade">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2022 - 2024</span>
+                <h3>Segurança da Informação</h3>
+                <h4>Graduação (FATEC Ourinhos)</h4>
+                <p>Formação sólida em segurança cibernética, infraestrutura de redes, proteção de dados, análise de vulnerabilidades e desenvolvimento de software seguro.</p>
+            </div>
+        </div>
+
+        <!-- 4. Estágio SME SiguEscola -->
+        <div class="timeline-item fade">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2024 - 2025</span>
+                <h3>Desenvolvedor Web (Estágio)</h3>
+                <h4>SME - Secretaria Municipal de Educação</h4>
+                <p>Desenvolvimento e sustentação da plataforma <strong>SiguEscola</strong> utilizando Node.js, EJS, MySQL e Git para modernização da gestão educacional municipal.</p>
+            </div>
+        </div>
+
+        <!-- 5. Intercâmbio / Experiência EUA -->
+        <div class="timeline-item fade">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2025 - 2026</span>
+                <h3>Experiência Profissional Internacional</h3>
+                <h4>The Rangeley Inn & Tavern (Maine, EUA)</h4>
+                <p>Atuação em ambiente corporativo de hospitalidade internacional nos Estados Unidos, desenvolvendo fluência plena em inglês, excelência no atendimento ao cliente, dinamismo e trabalho em equipe multicultural.</p>
+            </div>
+        </div>
+
+        <!-- 6. Graduação ADS -->
+        <div class="timeline-item fade">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <span class="timeline-date">2023 - Presente</span>
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <h4>Graduação em Andamento</h4>
+                <p>Foco no desenvolvimento de software full stack, engenharia de software, inteligência computacional e arquitetura de sistemas modernos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 4. Portfólio (Fundo Secundário) -->
+    <section class="portifolio fade" id="portifolio">
         <div class="mid-text">
-            <!--<a href="#" class="h-line">
-                <i class="ri-shining-2-line"></i>
-                <span>Portifolio!</span>
-            </a>-->
-            <h2>Meus ultimos <span>projetos</span></h2>
+            <h2>Meus últimos <span>projetos</span></h2>
         </div>
-        <div>
-            <div class="portifolio-content">
-                <div class="row">
-                    <div class="row-img">
-                        <img src="img/p1.png">
-                    </div>
-                    
-                    <div class="row-in">
-                        <div class="row-left"> 
-                            <h3>Portifolio</h3>
-                            <h6>No projeto utilizei algumas tecnologias que me ajudarão no futuro. Além da implementação de algumas funções como redirecionamento para o whatsapp, disponibilização do modo white ou dark.</h6>
-                            <br>
-                            <h3>Tecnologias utilizadas</h3>
-                            <div class="tec">
-                                <img src="./img/tecnologias/css.png">
-                                <img src="./img/tecnologias/html5.png">
-                                <img src="./img/tecnologias/javascript.png">
-                                <img src="./img/tecnologias/git.png">
-                                <img id="imagem2" src="./img/tecnologias/github.png">
-                            </div>
-                        </div>
-                        <div class="row-right">
-                            <a href="#"><i class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!--
-                <div class="row">
-                    <div class="row-img">
-                        <img src="img/p2.png">
-                    </div>
 
-                    <div class="row-in">
-                        <div class="row-left">
-                            <h3>Projetos em realização</h3>
-                            <h6></h6>
-                        </div>
-                        <div class="row-right">
-                            <a href="#"><i class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
+        <div class="portifolio-content">
+
+            <!-- Card 1: Portfólio -->
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/p1.svg" alt="Prévia do projeto Portfólio Pessoal">
                 </div>
 
-                <div class="row">
-                    <div class="row-img">
-                        <img src="img/p3.png">
-                    </div>
-
-                    <div class="row-in">
-                        <div class="row-left">
-                            <h3>Projetos em realização</h3>
-                            <h6>Oque foi utilizado</h6>
+                <div class="row-in">
+                    <div class="row-left">
+                        <h3>Portfólio Pessoal</h3>
+                        <h6>Interface moderna com suporte a dark/light mode, design responsivo e animações fluidas focadas em alta performance.</h6>
+                        <br>
+                        <h3>Tecnologias utilizadas</h3>
+                        <div class="tec">
+                            <img src="./img/tecnologias/html.svg" alt="HTML5">
+                            <img src="./img/tecnologias/css.svg" alt="CSS3">
+                            <img src="./img/tecnologias/javascript.svg" alt="JavaScript">
+                            <img src="./img/tecnologias/git.svg" alt="Git">
+                            <img src="./img/tecnologias/github.svg" alt="GitHub">
                         </div>
-                        <div class="row-right">
-                            <a href="#"><i class="ri-arrow-right-line"></i></a>
-                        </div>
                     </div>
-                </div>-->
+                    <div class="row-right">
+                        <a href="#home" aria-label="Ver projeto Portfólio"><i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Card 2: SiguEscola -->
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/siguescola.svg" alt="Prévia do projeto SiguEscola">
+                </div>
+
+                <div class="row-in">
+                    <div class="row-left">
+                        <h3>SiguEscola</h3>
+                        <h6>Sistema integrado de gerenciamento escolar municipal desenvolvido com Node.js, EJS, MySQL e versionamento via Git/GitHub.</h6>
+                        <br>
+                        <h3>Tecnologias utilizadas</h3>
+                        <div class="tec">
+                            <img src="./img/tecnologias/nodejs.svg" alt="Node.js">
+                            <img src="./img/tecnologias/ejs.svg" alt="EJS">
+                            <img src="./img/tecnologias/mysql.svg" alt="MySQL">
+                            <img src="./img/tecnologias/css.svg" alt="CSS3">
+                            <img src="./img/tecnologias/git.svg" alt="Git">
+                        </div>
+                    </div>
+                    <div class="row-right">
+                        <a href="https://siguescola.com.br" target="_blank" rel="noopener noreferrer" aria-label="Acessar SiguEscola">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Aligna -->
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/aligna.svg" alt="Prévia do projeto Aligna">
+                </div>
+                <div class="row-in">
+                    <div class="row-left">
+                        <h3>Aligna</h3>
+                        <h6>Aplicação com visão computacional para monitoramento ergonômico, postura corporal e rastreamento de piscadas em tempo real.</h6>
+                        <br>
+                        <h3>Tecnologias utilizadas</h3>
+                        <div class="tec">
+                            <img src="./img/tecnologias/javascript.svg" alt="JavaScript">
+                            <img src="./img/tecnologias/tensorflow.svg" alt="TensorFlow.js">
+                            <img src="./img/tecnologias/mediapipe.svg" alt="MediaPipe">
+                            <img src="./img/tecnologias/chartjs.svg" alt="Chart.js">
+                        </div>
+                    </div>
+                    <div class="row-right">
+                        <a href="https://alignatg.github.io" target="_blank" rel="noopener noreferrer" aria-label="Acessar Aligna">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-</div>
 
-    <!-- contato -->
-    <div class="fade">
-    <section class="contact" id="contact">
+    <!-- 5. Contato + Rodapé Integrado (Fundo Base) -->
+    <section class="contact fade" id="contact">
         <div class="contact-main">
             <h2>Bora <span>conversar</span></h2>
 
@@ -242,41 +297,50 @@
             </div>
 
             <div class="num">
-                <p>Chame:</p>
+                <p>WhatsApp:</p>
                 <h6>(14) 99818-1004</h6>
             </div>
 
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/joao-latczuk/"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="https://www.instagram.com/joaolatczuk/"><i class="ri-instagram-fill"></i></a>
-                <a href="https://github.com/joaolatczuk/"><i class="ri-github-fill"></i></a>
-                <a href=" https://wa.me/14998181004"><i class="ri-whatsapp-fill"></i></a>
+                <a href="https://www.linkedin.com/in/joao-latczuk/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/joaolatczuk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="ri-instagram-fill"></i>
+                </a>
+                <a href="https://github.com/joaolatczuk/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://wa.me/5514998181004" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="ri-whatsapp-fill"></i>
+                </a>
             </div>
         </div>
+
         <form action="https://formsubmit.co/joaocontatoscel@gmail.com" class="contact-form" method="POST">
-            <input type="text" name="name"placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Endereço de email..." required>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Insira sua mensagem aqui ..." required></textarea>
-            <input type="hidden" name="_captcha" value="true">
-            <input type="submit" value="Mande Agora" class="submit-btn">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Endereço de e-mail..." required>
+            <textarea name="message" cols="30" rows="8" placeholder="Insira sua mensagem aqui..." required></textarea>
+            <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://joaolatczuk.github.io/index.html">
+            <button type="submit" class="submit-btn">Enviar Mensagem</button>
         </form>
-    </section>
-<div>
-    <!-- parte de baixo -->
-    <div class="fade">
-        <section class="footer2">
+
+        <!-- Rodapé Embutido na Base do Bloco de Contato -->
+        <footer class="footer2">
             <div class="footer">
-                <div class="copyright"> Copyright © 2024 João Vinicius Latczuk. Todos os direitos reservados. </div>
-                <a href="#home" class="scroll-top">
+                <div class="copyright">
+                    <p>Copyright © 2026 João Vinicius Latczuk. Todos os direitos reservados.</p>
+                </div>
+                <a href="#home" class="scroll-top" aria-label="Voltar ao topo">
                     <i class="ri-arrow-up-s-line"></i>
                 </a>
             </div>
-        </section>
-    </div>
-</div>
+        </footer>
+    </section>
 
-<!-- aquivo js -->
-<script src="js/script.js"></script>
+    <!-- Arquivo JavaScript -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
