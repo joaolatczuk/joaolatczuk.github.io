@@ -79,6 +79,7 @@ img {
 
 /* Respeita a preferência do usuário por menos movimento */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -118,7 +119,8 @@ header.sticky {
 .logo {
     display: inline-flex;
     align-items: center;
-    color: var(--text-color); /* Fica preto no modo claro e branco no modo escuro */
+    color: var(--text-color);
+    /* Fica preto no modo claro e branco no modo escuro */
     transition: color 0.3s ease;
 }
 
