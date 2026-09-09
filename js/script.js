@@ -26,6 +26,8 @@ if (menuIcon && menulist) {
     menuIcon.addEventListener("click", () => {
         menuIcon.classList.toggle("bx-x");
         menulist.classList.toggle("open");
+        // Trava o scroll do fundo da página enquanto o menu estiver aberto
+        body.classList.toggle("menu-open", menulist.classList.contains("open"));
     });
 
     // Fecha o menu mobile ao clicar em um link
@@ -33,6 +35,7 @@ if (menuIcon && menulist) {
         link.addEventListener("click", () => {
             menuIcon.classList.remove("bx-x");
             menulist.classList.remove("open");
+            body.classList.remove("menu-open");
         });
     });
 }

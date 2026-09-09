@@ -8,9 +8,9 @@
 }
 
 :root {
-    --h1-fonts: 6rem;
-    --h2-fonts: 3.8rem;
-    --p-fonts: 1.1rem;
+    --h1-fonts: clamp(2.4rem, 5.6vw + 1rem, 6rem);
+    --h2-fonts: clamp(1.9rem, 3.4vw + 1rem, 3.8rem);
+    --p-fonts: clamp(0.95rem, 0.4vw + 0.85rem, 1.1rem);
 
 
     /* Tema Claro */
@@ -70,6 +70,23 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Respeita a preferência do usuário por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Header Fixo */
@@ -220,6 +237,18 @@ header.sticky {
     color: var(--text-color);
 }
 
+/* Foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.dark:focus-visible,
+#menu-icon:focus-visible {
+    outline: 2px solid var(--main2-color);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
 /* Estrutura Geral das Seções */
 section {
     scroll-snap-align: start;
@@ -279,6 +308,11 @@ section {
     color: var(--other-color);
 }
 
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .social-icons a {
     display: inline-flex;
     align-items: center;
@@ -305,10 +339,14 @@ section {
 .h-bt {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 20px;
 }
 
 .btn1 {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 18px 35px;
     background: transparent;
     border: 1px solid var(--alt-color);
@@ -316,7 +354,6 @@ section {
     font-size: 18px;
     font-weight: 500;
     border-radius: 17px;
-    margin-right: 20px;
     transition: all 0.4s ease;
 }
 
@@ -327,7 +364,9 @@ section {
 }
 
 .btn2 {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 18px 35px;
     background: linear-gradient(135deg, var(--main-color) 0%, var(--main2-color) 100%);
     color: #ffffff;
@@ -810,12 +849,6 @@ form .submit-btn:hover {
     section {
         padding: 90px 3% 60px;
     }
-
-    :root {
-        --h1-fonts: 4.5rem;
-        --h2-fonts: 3rem;
-        --p-fonts: 1rem;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -857,29 +890,24 @@ form .submit-btn:hover {
     }
 }
 
-@media (max-width: 900px) {
-    :root {
-        --h1-fonts: 4rem;
-        --h2-fonts: 2.8rem;
-    }
-}
-
 @media (max-width: 800px) {
     #menu-icon {
         display: block;
     }
 
     .menulist {
-        position: absolute;
+        position: fixed;
+        z-index: 999;
         width: 100%;
         height: 100vh;
-        padding: 80px 40px;
+        padding: 100px 40px 40px;
         top: 0;
         left: 100%;
         display: flex;
         flex-direction: column;
         background: var(--second-bg-color);
-        transition: all 0.4s ease-in-out;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+        transition: left 0.4s ease-in-out;
     }
 
     .menulist a {
@@ -917,20 +945,26 @@ form .submit-btn:hover {
 
     .footer {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .scroll-top {
         position: static;
+        margin-top: 4px;
+    }
+
+    /* O rodapé empilhado (texto + botão) fica mais alto: reserva mais espaço */
+    .contact {
+        padding-bottom: 190px;
+    }
+
+    .footer2 {
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
 }
 
 @media (max-width: 590px) {
-    :root {
-        --h1-fonts: 3rem;
-        --h2-fonts: 2.2rem;
-    }
-
     .about-img img {
         height: 350px;
         max-width: 100%;
@@ -939,4 +973,130 @@ form .submit-btn:hover {
     form .submit-btn {
         width: 100%;
     }
+}
+
+/* Celulares médios (a maioria dos smartphones atuais) */
+@media (max-width: 480px) {
+    header {
+        height: 65px;
+        padding: 0 5%;
+    }
+
+    section {
+        padding: 85px 5.5% 50px;
+    }
+
+    .logo img {
+        max-width: 36px;
+    }
+
+    /* Esconde o texto do botão "Vamos conversar" e mantém só o ícone do menu */
+    .menu-btn {
+        display: none;
+    }
+
+    #menu-icon {
+        margin-left: 0;
+        font-size: 34px;
+    }
+
+    .home-text h4 {
+        font-size: 1rem;
+        margin-bottom: 26px;
+    }
+
+    .h-bt {
+        gap: 12px 14px;
+    }
+
+    .btn1,
+    .btn2 {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 15px 22px;
+        font-size: 15px;
+        border-radius: 14px;
+    }
+
+    .social-icons a {
+        height: 44px;
+        width: 44px;
+        margin-right: 10px;
+        margin-bottom: 26px;
+    }
+
+    .about-img img {
+        height: 280px;
+    }
+
+    .about-text h5 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content {
+        padding: 18px 20px;
+    }
+
+    .portifolio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .row-in {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .row-right a {
+        align-self: flex-end;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px;
+    }
+
+    .footer2 {
+        padding: 18px 5.5%;
+    }
+}
+
+/* Celulares muito pequenos (ex: iPhone SE, Android compactos) */
+@media (max-width: 360px) {
+    :root {
+        --p-fonts: 0.92rem;
+    }
+
+    section {
+        padding: 80px 6% 45px;
+    }
+
+    .home-text h4 {
+        font-size: 0.92rem;
+    }
+
+    .btn1,
+    .btn2 {
+        padding: 13px 18px;
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        height: 40px;
+        width: 40px;
+        font-size: 16px;
+    }
+
+    .menulist {
+        padding: 90px 28px 30px;
+    }
+
+    .menulist a {
+        font-size: 1.3rem;
+    }
+}
+
+/* Evita scroll da página quando o menu mobile está aberto */
+body.menu-open {
+    overflow: hidden;
 }
