@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /arq/
+
+Sitemap: https://joaolatczuk.com.br/sitemap.xml
