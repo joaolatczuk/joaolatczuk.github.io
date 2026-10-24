@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Latczuk | Portfólio</title>
+    <!-- Ícone PNG quadrado padrão para o bot do Google Search (Múltiplo de 48px) -->
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192x192.png">
+
+    <!-- Compatibilidade para navegadores desktop e mobile -->
     <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- SEO Essencial -->
-    <meta name="description" content="Portfólio de João Vinicius Latczuk. Conheça meus projetos, stack de desenvolvimento e trajetória profissional.">
+    <meta name="description"
+        content="Portfólio de João Vinicius Latczuk. Conheça meus projetos, stack de desenvolvimento e trajetória profissional.">
     <meta name="author" content="João Vinicius Latczuk">
     <link rel="canonical" href="https://joaolatczuk.com.br/">
 
@@ -38,6 +46,23 @@
 
 <body>
 
+    <!-- Modal de Seleção de Idioma (Overlay Inicial) -->
+    <div id="language-modal" class="lang-modal-overlay">
+        <div class="lang-modal-content">
+            <h2>Selecione o idioma / Select language</h2>
+            <div class="flags-container">
+                <button onclick="selectLanguage('pt')" class="flag-btn" aria-label="Português">
+                    <img src="https://flagcdn.com/w160/br.png" alt="Bandeira do Brasil">
+                    <span>Português</span>
+                </button>
+                <button onclick="selectLanguage('en')" class="flag-btn" aria-label="English">
+                    <img src="https://flagcdn.com/w160/us.png" alt="Flag of United States">
+                    <span>English</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Cabeçalho Fixo -->
     <header>
         <a href="#home" class="logo">
@@ -45,11 +70,11 @@
         </a>
 
         <ul class="menulist">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#timeline">Trajetória</a></li>
-            <li><a href="#portifolio">Portfólio</a></li>
-            <li><a href="#contact">Contatos</a></li>
+            <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+            <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
+            <li><a href="#timeline" data-i18n="nav_timeline">Trajetória</a></li>
+            <li><a href="#portifolio" data-i18n="nav_portfolio">Portfólio</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contatos</a></li>
         </ul>
 
         <!-- Botão Dark Mode -->
@@ -63,7 +88,7 @@
 
         <div class="menu-right">
             <a href="#contact" class="menu-btn">
-                <span>Vamos conversar</span>
+                <span data-i18n="btn_talk">Vamos conversar</span>
                 <i class="ri-message-3-line"></i>
             </a>
             <div class="bx bx-menu" id="menu-icon" aria-label="Abrir menu mobile"></div>
@@ -73,8 +98,9 @@
     <!-- 1. Home (Fundo Base) -->
     <section class="home fade" id="home">
         <div class="home-text">
-            <h1>Desenvolvedor <br><span class="input"></span></h1>
-            <h4>Formado em Segurança da Informação com foco em Node.js e desenvolvimento web full stack.</h4>
+            <h1><span data-i18n="home_title_prefix">Desenvolvedor</span> <br><span class="input"></span></h1>
+            <h4 data-i18n="home_sub">Formado em Segurança da Informação com foco em Node.js e desenvolvimento web full
+                stack.</h4>
 
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/joao-latczuk/" target="_blank" rel="noopener noreferrer"
@@ -95,12 +121,13 @@
 
             <div class="h-bt">
                 <a href="#portifolio" class="btn1">
-                    Meus trabalhos
+                    <span data-i18n="btn_works">Meus trabalhos</span>
                     <i class="ri-arrow-right-s-line"></i>
                 </a>
 
-                <a href="./arq/Curriculo.pdf" class="btn2" download aria-label="Baixar Currículo em PDF">
-                    Download CV
+                <a href="./arq/Curriculo.pdf" class="btn2 btn-cv-download" download
+                    aria-label="Baixar Currículo em PDF">
+                    <span data-i18n="btn_cv">Download CV</span>
                     <i class="ri-download-2-line"></i>
                 </a>
             </div>
@@ -114,10 +141,10 @@
         </div>
 
         <div class="about-text">
-            <h2>Mais <span>sobre mim</span></h2>
-            <h5>Olá, eu sou João Vinicius Latczuk, desenvolvedor focado em criar soluções completas e eficientes tanto
-                no front-end quanto no back-end.</h5>
-            <p>
+            <h2><span data-i18n="about_title">Mais </span><span data-i18n="about_title_span">sobre mim</span></h2>
+            <h5 data-i18n="about_intro">Olá, eu sou João Vinicius Latczuk, desenvolvedor focado em criar soluções
+                completas e eficientes tanto no front-end quanto no back-end.</h5>
+            <p data-i18n="about_desc">
                 Graduado em Segurança da Informação pela Faculdade de Tecnologia de Ourinhos (FATEC-OU) e cursando
                 Análise e Desenvolvimento de Sistemas. Possuo sólida experiência com ecossistema JavaScript/Node.js,
                 bancos relacionais (MySQL) e integração de templates/APIs, consolidada em projetos como o
@@ -127,12 +154,12 @@
 
             <div class="h-bt">
                 <a href="#portifolio" class="btn1">
-                    Meus trabalhos
+                    <span data-i18n="btn_works">Meus trabalhos</span>
                     <i class="ri-arrow-right-s-line"></i>
                 </a>
 
-                <a href="./arq/Curriculo.pdf" class="btn2" download>
-                    Download CV
+                <a href="./arq/Curriculo.pdf" class="btn2 btn-cv-download" download>
+                    <span data-i18n="btn_cv">Download CV</span>
                     <i class="ri-download-2-line"></i>
                 </a>
             </div>
@@ -142,7 +169,8 @@
     <!-- 3. Trajetória / Timeline (Fundo Base) -->
     <section class="timeline-section fade" id="timeline">
         <div class="mid-text fade">
-            <h2>Minha <span>trajetória</span></h2>
+            <h2><span data-i18n="timeline_title">Minha </span><span data-i18n="timeline_title_span">trajetória</span>
+            </h2>
         </div>
 
         <div class="timeline-container">
@@ -153,9 +181,10 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2016 - 2018</span>
-                    <h3>Técnico em Informática para Internet</h3>
-                    <h4>Ensino Técnico Integrado ao Médio (ETEC Ourinhos)</h4>
-                    <p>Primeiro contato formal com desenvolvimento de software, abordando lógica de programação,
+                    <h3 data-i18n="t1_title">Técnico em Informática para Internet</h3>
+                    <h4 data-i18n="t1_place">Ensino Técnico Integrado ao Médio (ETEC Ourinhos)</h4>
+                    <p data-i18n="t1_desc">Primeiro contato formal com desenvolvimento de software, abordando lógica de
+                        programação,
                         fundamentos de web (HTML, CSS e JavaScript), banco de dados e infraestrutura.</p>
                 </div>
             </div>
@@ -165,9 +194,10 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2019 - 2020</span>
-                    <h3>Intercâmbio Cultural & Acadêmico</h3>
-                    <h4>Vivência Internacional (Argentina)</h4>
-                    <p>Experiência de imersão focada em fluência em espanhol, adaptabilidade multicultural, autonomia e
+                    <h3 data-i18n="t2_title">Intercâmbio Cultural & Acadêmico</h3>
+                    <h4 data-i18n="t2_place">Vivência Internacional (Argentina)</h4>
+                    <p data-i18n="t2_desc">Experiência de imersão focada em fluência em espanhol, adaptabilidade
+                        multicultural, autonomia e
                         resolução de problemas em ambientes dinâmicos.</p>
                 </div>
             </div>
@@ -177,9 +207,10 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2020 - 2023</span>
-                    <h3>Segurança da Informação</h3>
-                    <h4>Graduação (FATEC Ourinhos)</h4>
-                    <p>Formação sólida em segurança cibernética, infraestrutura de redes, proteção de dados, análise de
+                    <h3 data-i18n="t3_title">Segurança da Informação</h3>
+                    <h4 data-i18n="t3_place">Graduação (FATEC Ourinhos)</h4>
+                    <p data-i18n="t3_desc">Formação sólida em segurança cibernética, infraestrutura de redes, proteção
+                        de dados, análise de
                         vulnerabilidades e desenvolvimento de software seguro.</p>
                 </div>
             </div>
@@ -189,9 +220,10 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2024 - 2025</span>
-                    <h3>Desenvolvedor Web (Estágio)</h3>
-                    <h4>SME - Secretaria Municipal de Educação</h4>
-                    <p>Desenvolvimento e sustentação da plataforma <strong>SiguEscola</strong> utilizando Node.js, EJS,
+                    <h3 data-i18n="t4_title">Desenvolvedor Web (Estágio)</h3>
+                    <h4 data-i18n="t4_place">SME - Secretaria Municipal de Educação</h4>
+                    <p data-i18n="t4_desc">Desenvolvimento e sustentação da plataforma <strong>SiguEscola</strong>
+                        utilizando Node.js, EJS,
                         MySQL e Git para modernização da gestão educacional municipal.</p>
                 </div>
             </div>
@@ -201,9 +233,10 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2025 - 2026</span>
-                    <h3>Experiência Profissional Internacional</h3>
-                    <h4>The Rangeley Inn & Tavern (Maine, EUA)</h4>
-                    <p>Atuação em hospitalidade corporativa nos Estados Unidos, com prática diária de comunicação em
+                    <h3 data-i18n="t5_title">Experiência Profissional Internacional</h3>
+                    <h4 data-i18n="t5_place">The Rangeley Inn & Tavern (Maine, EUA)</h4>
+                    <p data-i18n="t5_desc">Atuação em hospitalidade corporativa nos Estados Unidos, com prática diária
+                        de comunicação em
                         inglês e rotina internacional. Sólida experiência em atendimento de alto padrão, resolução ágil
                         de problemas e integração em ambientes multiculturais.</p>
                 </div>
@@ -214,9 +247,10 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2023 - Presente</span>
-                    <h3>Análise e Desenvolvimento de Sistemas</h3>
-                    <h4>Graduação em Andamento</h4>
-                    <p>Foco no desenvolvimento de software full stack, engenharia de software, inteligência
+                    <h3 data-i18n="t6_title">Análise e Desenvolvimento de Sistemas</h3>
+                    <h4 data-i18n="t6_place">Graduação em Andamento</h4>
+                    <p data-i18n="t6_desc">Foco no desenvolvimento de software full stack, engenharia de software,
+                        inteligência
                         computacional e arquitetura de sistemas modernos.</p>
                 </div>
             </div>
@@ -226,7 +260,8 @@
     <!-- 4. Portfólio (Fundo Secundário) -->
     <section class="portifolio fade" id="portifolio">
         <div class="mid-text">
-            <h2>Meus últimos <span>projetos</span></h2>
+            <h2><span data-i18n="portfolio_title">Meus últimos </span><span
+                    data-i18n="portfolio_title_span">projetos</span></h2>
         </div>
 
         <div class="portifolio-content">
@@ -239,11 +274,11 @@
 
                 <div class="row-in">
                     <div class="row-left">
-                        <h3>Portfólio Pessoal</h3>
-                        <h6>Interface moderna com suporte a dark/light mode, design responsivo e animações fluidas
-                            focadas em alta performance.</h6>
+                        <h3 data-i18n="p1_title">Portfólio Pessoal</h3>
+                        <h6 data-i18n="p1_desc">Interface moderna com suporte a dark/light mode, design responsivo e
+                            animações fluidas focadas em alta performance.</h6>
                         <br>
-                        <h3>Tecnologias utilizadas</h3>
+                        <h3 data-i18n="tech_used">Tecnologias utilizadas</h3>
                         <div class="tec">
                             <img src="./img/tecnologias/html.svg" alt="HTML5">
                             <img src="./img/tecnologias/css.svg" alt="CSS3">
@@ -266,11 +301,11 @@
 
                 <div class="row-in">
                     <div class="row-left">
-                        <h3>SiguEscola</h3>
-                        <h6>Sistema integrado de gerenciamento escolar municipal desenvolvido com Node.js, EJS, MySQL e
-                            versionamento via Git/GitHub.</h6>
+                        <h3 data-i18n="p2_title">SiguEscola</h3>
+                        <h6 data-i18n="p2_desc">Sistema integrado de gerenciamento escolar municipal desenvolvido com
+                            Node.js, EJS, MySQL e versionamento via Git/GitHub.</h6>
                         <br>
-                        <h3>Tecnologias utilizadas</h3>
+                        <h3 data-i18n="tech_used">Tecnologias utilizadas</h3>
                         <div class="tec">
                             <img src="./img/tecnologias/nodejs.svg" alt="Node.js">
                             <img src="./img/tecnologias/ejs.svg" alt="EJS">
@@ -295,11 +330,11 @@
                 </div>
                 <div class="row-in">
                     <div class="row-left">
-                        <h3>Aligna</h3>
-                        <h6>Aplicação com visão computacional para monitoramento ergonômico, postura corporal e
-                            rastreamento de piscadas em tempo real.</h6>
+                        <h3 data-i18n="p3_title">Aligna</h3>
+                        <h6 data-i18n="p3_desc">Aplicação com visão computacional para monitoramento ergonômico, postura
+                            corporal e rastreamento de piscadas em tempo real.</h6>
                         <br>
-                        <h3>Tecnologias utilizadas</h3>
+                        <h3 data-i18n="tech_used">Tecnologias utilizadas</h3>
                         <div class="tec">
                             <img src="./img/tecnologias/javascript.svg" alt="JavaScript">
                             <img src="./img/tecnologias/tensorflow.svg" alt="TensorFlow.js">
@@ -322,7 +357,7 @@
     <!-- 5. Contato + Rodapé Integrado (Fundo Base) -->
     <section class="contact fade" id="contact">
         <div class="contact-main">
-            <h2>Bora <span>conversar</span></h2>
+            <h2><span data-i18n="contact_title">Bora </span><span data-i18n="contact_title_span">conversar</span></h2>
 
             <div class="email">
                 <p>Email:</p>
@@ -331,7 +366,7 @@
 
             <div class="num">
                 <p>WhatsApp:</p>
-                <h6>(14) 99818-1004</h6>
+                <h6>+55 (14) 99818-1004</h6>
             </div>
 
             <div class="social-icons">
@@ -353,19 +388,21 @@
         </div>
 
         <form action="https://formsubmit.co/joaocontatoscel@gmail.com" class="contact-form" method="POST">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Endereço de e-mail..." required>
-            <textarea name="message" cols="30" rows="8" placeholder="Insira sua mensagem aqui..." required></textarea>
+            <input type="text" name="name" data-i18n-placeholder="placeholder_name" placeholder="Seu nome" required>
+            <input type="email" name="email" data-i18n-placeholder="placeholder_email"
+                placeholder="Endereço de e-mail..." required>
+            <textarea name="message" cols="30" rows="8" data-i18n-placeholder="placeholder_message"
+                placeholder="Insira sua mensagem aqui..." required></textarea>
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://joaolatczuk.github.io/index.html">
-            <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            <button type="submit" class="submit-btn" data-i18n="btn_send">Enviar Mensagem</button>
         </form>
 
         <!-- Rodapé Embutido na Base do Bloco de Contato -->
         <footer class="footer2">
             <div class="footer">
                 <div class="copyright">
-                    <p>Copyright © 2026 João Vinicius Latczuk. Todos os direitos reservados.</p>
+                    <p data-i18n="copyright">Copyright © 2026 João Vinicius Latczuk. Todos os direitos reservados.</p>
                 </div>
                 <a href="#home" class="scroll-top" aria-label="Voltar ao topo">
                     <i class="ri-arrow-up-s-line"></i>
